@@ -1,0 +1,32 @@
+[
+    {
+    "epoch": "LEO_SIM",
+    "target_debris": [],
+    "background_debris": []
+},
+    {
+        "id": "28353" ,
+        "mass": 9000,
+        "shape": "cylinder",
+        "dimensions": {
+            "radius":2,
+            "length": 12
+        },
+        "com_offset":[0.01,-0.02,0.03],
+        "orbit":{
+            "a":6778000,
+            "e":0.001,
+            "i":51.6
+
+        }
+    },
+{
+"id": "BG_001",
+"mass":50,
+"orbit":{
+    "a":6775000,
+    "e":0.002,
+    "i":52.0
+}
+}
+]
