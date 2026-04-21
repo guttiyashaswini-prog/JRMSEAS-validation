@@ -1,9 +1,10 @@
-[
-    {
-    "epoch": "LEO_SIM",
-    "target_debris": [],
-    "background_debris": []
-},
+{
+    "model_assumptions": {
+        "hollow_ratio": 0.8,
+        "reference_frame": "ECI"
+    },
+
+    "debris": [
     {
         "id": "sl-16_28353" ,
         "satcat_id":28353,
@@ -23,7 +24,7 @@
         "hbr_m":5.2
     },
         {
-        "id": "ENVISAT_27386" ,
+        "id": "envisat_27386" ,
         "satcat_id":27386,
         "type":"target_debris",
         "risk_value":175,
@@ -42,7 +43,7 @@
         "hbr_m":14
     },
             {
-        "id": "COSMOS724_7727" ,
+        "id": "cosmos724_7727" ,
         "satcat_id":7727,
         "type":"target_debris",
         "risk_value":135,
@@ -78,7 +79,7 @@
         "hbr_m":5.2
     },
          {
-        "id": "H-2R/B_24279" ,
+        "id": "h-2r/b_24279" ,
         "satcat_id":24279,
         "type":"target_debris",
         "risk_value":115,
@@ -96,7 +97,7 @@
         "hbr_m":5.8
     },
              {
-        "id": "CZ2CR/B_39203" ,
+        "id": "cz2cr/b_39203" ,
         "satcat_id":39203,
         "type":"target_debris",
         "risk_value":107,
@@ -114,7 +115,7 @@
         "hbr_m":3.7
     },
                  {
-        "id": "COSMOS2237_22565" ,
+        "id": "cosmos2237_22565" ,
         "satcat_id":22565,
         "type":"target_debris",
         "risk_value":106,
@@ -133,7 +134,7 @@
         "hbr_m":9.5
     },
     {
-        "id": "METEOR1-11_5917" ,
+        "id": "meteor1-11_5917" ,
         "satcat_id":5917,
         "type":"target_debris",
         "risk_value":94,
@@ -151,7 +152,7 @@
         "hbr_m":4
     },
     {
-        "id": "Sl-8R/B_16292" ,
+        "id": "sl-8r/b_16292" ,
         "satcat_id":16292,
         "type":"target_debris",
         "risk_value":86,
@@ -169,7 +170,7 @@
         "hbr_m":5
     },
         {
-        "id": "SERVIS1_28060" ,
+        "id": "servis1_28060" ,
         "satcat_id":28060,
         "type":"target_debris",
         "risk_value":86,
@@ -206,7 +207,7 @@
         "hbr_m":5.2
     },
         {
-        "id": "COSMOS1677_15986" ,
+        "id": "cosmos1677_15986" ,
         "satcat_id":15986,
         "type":"target_debris",
         "risk_value":60,
@@ -224,7 +225,7 @@
         "hbr_m":5.5
     },
             {
-        "id": "CZ4CR/B_36123" ,
+        "id": "cz4cr/b_36123" ,
         "satcat_id":36123,
         "type":"target_debris",
         "risk_value":60,
@@ -242,7 +243,7 @@
         "hbr_m":8
     },
                 {
-        "id": "SPOT3_22823" ,
+        "id": "spot3_22823" ,
         "satcat_id":22823,
         "type":"target_debris",
         "risk_value":59,
@@ -261,7 +262,7 @@
         "hbr_m":4
     },
     {
-        "id": "COSMOS2334_24304" ,
+        "id": "cosmos2334_24304" ,
         "satcat_id":24304,
         "type":"target_debris",
         "risk_value":59,
@@ -279,7 +280,7 @@
         "hbr_m":4
     },
         {
-        "id": "CZ2Dr/b_44548" ,
+        "id": "cz2dr/b_44548" ,
         "satcat_id":44548,
         "type":"target_debris",
         "risk_value":55,
@@ -297,7 +298,7 @@
         "hbr_m":6.5
     },
     {
-        "id": "Sl-8R/B_11511" ,
+        "id": "sl-8r/b_11511" ,
         "satcat_id":11511,
         "type":"target_debris",
         "risk_value":50,
@@ -315,7 +316,7 @@
         "hbr_m":5
     },
     {
-        "id": "Sl-16R/B_20625" ,
+        "id": "sl-16r/b_20625" ,
         "satcat_id":20625,
         "type":"target_debris",
         "risk_value":48,
@@ -333,7 +334,7 @@
         "hbr_m":5.2
     },
             {
-        "id": "COSMOS2315_23603" ,
+        "id": "cosmos2315_23603" ,
         "satcat_id":23603,
         "type":"target_debris",
         "risk_value":47,
@@ -387,7 +388,7 @@
         "hbr_m":5.2
     },
         {
-        "id": "COSMOS489_6019" ,
+        "id": "cosmos489_6019" ,
         "satcat_id":6019,
         "type":"target_debris",
         "risk_value":43,
@@ -422,7 +423,7 @@
         "hbr_m":5
     },
     {
-        "id": "NAZEHDA5_25567" ,
+        "id": "nazehda5_25567" ,
         "satcat_id":25567,
         "type":"target_debris",
         "risk_value":43,
@@ -494,7 +495,7 @@
         "hbr_m":5
     },
     {
-        "id": "CZ4CR/B_39261" ,
+        "id": "cz4cr/b_39261" ,
         "satcat_id":39261,
         "type":"target_debris",
         "risk_value":33,
@@ -638,7 +639,7 @@
         "hbr_m":5.2
     },
     {
-        "id": "COSMOS970_10531" ,
+        "id": "cosmos970_10531" ,
         "satcat_id":10531,
         "type":"target_debris",
         "risk_value":27,
@@ -692,7 +693,7 @@
         "hbr_m":5
     },
         {
-        "id": "cz4cr/b_29014" ,
+        "id": "cz4cr/b_39014" ,
         "satcat_id":39014,
         "type":"target_debris",
         "risk_value":25,
@@ -800,8 +801,26 @@
         "hbr_m":5.2
     },
         {
-        "id": "sl-14_22285" ,
-        "satcat_id":22285,
+        "id": "sl-8_21088" ,
+        "satcat_id":21088,
+        "type":"target_debris",
+        "risk_value":21,
+        "count_frag":42,
+        "mass": 1435,
+        "shape": "hollow_cylinder",
+        "dimensions": {
+            "radius":1.2,
+            "height":6.55
+        },
+        "orbit":{
+            "altitude_km":973,
+            "inclination_deg":82.9
+        },
+        "hbr_m":5
+    },
+        {
+        "id": "sl-14_13114" ,
+        "satcat_id":13114,
         "type":"target_debris",
         "risk_value":20,
         "count_frag":36,
@@ -818,7 +837,7 @@
         "hbr_m":3.5
     },
     {
-        "id": "COSMOS1249_12319" ,
+        "id": "cosmos1249_12319" ,
         "satcat_id":12319,
         "type":"target_debris",
         "risk_value":20,
@@ -852,14 +871,6 @@
             "inclination_deg":74.1
         },
         "hbr_m":5
-    },
-{
-"id": "BG_001",
-"mass":50,
-"orbit":{
-    "a":6775000,
-    "e":0.002,
-    "i":52.0
-}
-}
+    }
 ]
+}
