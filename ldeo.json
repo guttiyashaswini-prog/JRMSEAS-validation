@@ -6,12 +6,12 @@
 },
     {
         "id": "sl-16_28353" ,
-        "satno":"28353",
+        "satcat_id":28353,
         "type":"target_debris",
         "risk_value":283,
         "count_frag":341,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height": 11.5
@@ -24,7 +24,7 @@
     },
         {
         "id": "ENVISAT_27386" ,
-        "satno":"27386",
+        "satcat_id":27386,
         "type":"target_debris",
         "risk_value":175,
         "count_frag":276,
@@ -43,7 +43,7 @@
     },
             {
         "id": "COSMOS724_7727" ,
-        "satno":"7727",
+        "satcat_id":7727,
         "type":"target_debris",
         "risk_value":135,
         "count_frag":25,
@@ -61,12 +61,12 @@
     },
      {
         "id": "sl-16_19120" ,
-        "satno":"19120",
+        "satcat_id":19120,
         "type":"target_debris",
         "risk_value":117,
         "count_frag":366,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -79,12 +79,12 @@
     },
          {
         "id": "H-2R/B_24279" ,
-        "satno":"24279",
+        "satcat_id":24279,
         "type":"target_debris",
         "risk_value":115,
         "count_frag":133,
         "mass": 2700,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":2.2,
             "height":10.1
@@ -97,12 +97,12 @@
     },
              {
         "id": "CZ2CR/B_39203" ,
-        "satno":"39203",
+        "satcat_id":39203,
         "type":"target_debris",
         "risk_value":107,
         "count_frag":142,
         "mass": 4000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":2.725,
             "height":7.75
@@ -115,7 +115,7 @@
     },
                  {
         "id": "COSMOS2237_22565" ,
-        "satno":"22565",
+        "satcat_id":22565,
         "type":"target_debris",
         "risk_value":106,
         "count_frag":64,
@@ -134,7 +134,7 @@
     },
     {
         "id": "METEOR1-11_5917" ,
-        "satno":"5917",
+        "satcat_id":5917,
         "type":"target_debris",
         "risk_value":94,
         "count_frag":33,
@@ -152,12 +152,12 @@
     },
     {
         "id": "Sl-8R/B_16292" ,
-        "satno":"16292",
+        "satcat_id":16292,
         "type":"target_debris",
         "risk_value":86,
         "count_frag":33,
         "mass": 1435,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.2,
             "height":6.55
@@ -170,7 +170,7 @@
     },
         {
         "id": "SERVIS1_28060" ,
-        "satno":"28060",
+        "satcat_id":28060,
         "type":"target_debris",
         "risk_value":86,
         "count_frag":11,
@@ -189,12 +189,12 @@
     },
     {
         "id": "sl-16_19650" ,
-        "satno":"19650",
+        "satcat_id":19650,
         "type":"target_debris",
         "risk_value":71,
         "count_frag":262,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height": 11.5
@@ -207,7 +207,7 @@
     },
         {
         "id": "COSMOS1677_15986" ,
-        "satno":"15986",
+        "satcat_id":15986,
         "type":"target_debris",
         "risk_value":60,
         "count_frag":19,
@@ -225,12 +225,12 @@
     },
             {
         "id": "CZ4CR/B_36123" ,
-        "satno":"36123",
+        "satcat_id":36123,
         "type":"target_debris",
         "risk_value":60,
         "count_frag":37,
         "mass": 2000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.45,
             "height": 14.8
@@ -243,7 +243,7 @@
     },
                 {
         "id": "SPOT3_22823" ,
-        "satno":"22823",
+        "satcat_id":22823,
         "type":"target_debris",
         "risk_value":59,
         "count_frag":67,
@@ -258,11 +258,11 @@
             "altitude_km":826,
             "inclination_deg":98.9
         },
-        "hbr_m":8.5
+        "hbr_m":4
     },
     {
         "id": "COSMOS2334_24304" ,
-        "satno":"24304",
+        "satcat_id":24304,
         "type":"target_debris",
         "risk_value":59,
         "count_frag":16,
@@ -280,12 +280,12 @@
     },
         {
         "id": "CZ2Dr/b_44548" ,
-        "satno":"44548",
+        "satcat_id":44548,
         "type":"target_debris",
         "risk_value":55,
         "count_frag":225,
         "mass": 4000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.675,
             "height": 10.9
@@ -298,12 +298,12 @@
     },
     {
         "id": "Sl-8R/B_11511" ,
-        "satno":"11511",
+        "satcat_id":11511,
         "type":"target_debris",
         "risk_value":50,
         "count_frag":89,
         "mass": 1435,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.2,
             "height":6.55
@@ -316,30 +316,12 @@
     },
     {
         "id": "Sl-16R/B_20625" ,
-        "satno":"20625",
+        "satcat_id":20625,
         "type":"target_debris",
         "risk_value":48,
         "count_frag":344,
         "mass": 9000,
-        "shape": "cylinder",
-        "dimensions": {
-            "radius":1.9,
-            "height": 11.5
-        },
-        "orbit":{
-            "altitude_km":843,
-            "inclination_deg":71
-        },
-        "hbr_m":5.2
-    },
-        {
-        "id": "Sl-16R/B_20625" ,
-        "satno":"20625",
-        "type":"target_debris",
-        "risk_value":48,
-        "count_frag":344,
-        "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height": 11.5
@@ -352,7 +334,7 @@
     },
             {
         "id": "COSMOS2315_23603" ,
-        "satno":"23603",
+        "satcat_id":23603,
         "type":"target_debris",
         "risk_value":47,
         "count_frag":14,
@@ -370,12 +352,12 @@
     },
     {
         "id": "sl-16_25407" ,
-        "satno":"25407",
+        "satcat_id":25407,
         "type":"target_debris",
         "risk_value":46,
         "count_frag":323,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height": 11.5
@@ -388,12 +370,12 @@
     },
     {
         "id": "sl-16_24298" ,
-        "satno":"24298",
+        "satcat_id":24298,
         "type":"target_debris",
         "risk_value":44,
         "count_frag":280,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height": 11.5
@@ -406,7 +388,7 @@
     },
         {
         "id": "COSMOS489_6019" ,
-        "satno":"6019",
+        "satcat_id":6019,
         "type":"target_debris",
         "risk_value":43,
         "count_frag":13,
@@ -423,12 +405,12 @@
     },
     {
         "id": "sl-8r/b_8344" ,
-        "satno":"8344",
+        "satcat_id":8344,
         "type":"target_debris",
         "risk_value":43,
         "count_frag":117,
         "mass": 1435,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.2,
             "height":6.55
@@ -441,7 +423,7 @@
     },
     {
         "id": "NAZEHDA5_25567" ,
-        "satno":"8344",
+        "satcat_id":25567,
         "type":"target_debris",
         "risk_value":43,
         "count_frag":17,
@@ -459,12 +441,12 @@
     },
     {
         "id": "sl-16_25400" ,
-        "satno":"25400",
+        "satcat_id":25400,
         "type":"target_debris",
         "risk_value":40,
         "count_frag":331,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -477,12 +459,12 @@
     },
         {
         "id": "sl-16_17590" ,
-        "satno":"17590",
+        "satcat_id":17590,
         "type":"target_debris",
         "risk_value":40,
         "count_frag":348,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -495,12 +477,12 @@
     },
     {
         "id": "sl-8_16012" ,
-        "satno":"16012",
+        "satcat_id":16012,
         "type":"target_debris",
         "risk_value":40,
         "count_frag":83,
         "mass": 1435,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.2,
             "height":6.55
@@ -513,12 +495,12 @@
     },
     {
         "id": "CZ4CR/B_39261" ,
-        "satno":"39261",
+        "satcat_id":39261,
         "type":"target_debris",
         "risk_value":33,
         "count_frag":168,
         "mass": 2000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
            "radius":1.45,
             "height": 14.8
@@ -531,12 +513,12 @@
     },
         {
         "id": "sl-8_23774" ,
-        "satno":"23774",
+        "satcat_id":23774,
         "type":"target_debris",
         "risk_value":33,
         "count_frag":63,
         "mass": 1435,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.2,
             "height":6.55
@@ -549,12 +531,12 @@
     },
     {
         "id": "sl-16_22566" ,
-        "satno":"22566",
+        "satcat_id":22566,
         "type":"target_debris",
         "risk_value":30,
         "count_frag":293,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -567,12 +549,12 @@
     },
     {
         "id": "sl-16_22220" ,
-        "satno":"22566",
+        "satcat_id":22220,
         "type":"target_debris",
         "risk_value":30,
         "count_frag":330,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -585,12 +567,12 @@
     },
             {
         "id": "sl-8_24773" ,
-        "satno":"24773",
+        "satcat_id":24773,
         "type":"target_debris",
         "risk_value":29,
         "count_frag":45,
         "mass": 1435,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.2,
             "height":6.55
@@ -603,12 +585,12 @@
     },
     {
         "id": "sl-16_16182" ,
-        "satno":"16182",
+        "satcat_id":16182,
         "type":"target_debris",
         "risk_value":28,
         "count_frag":359,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -621,12 +603,12 @@
     },
         {
         "id": "sl-16_23705" ,
-        "satno":"23705",
+        "satcat_id":23705,
         "type":"target_debris",
         "risk_value":28,
         "count_frag":331,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -639,12 +621,12 @@
     },
             {
         "id": "sl-16_23405" ,
-        "satno":"23405",
+        "satcat_id":23405,
         "type":"target_debris",
         "risk_value":27,
         "count_frag":364,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -657,14 +639,14 @@
     },
     {
         "id": "COSMOS970_10531" ,
-        "satno":"10531",
+        "satcat_id":10531,
         "type":"target_debris",
         "risk_value":27,
         "count_frag":13,
         "mass": 2000,
         "shape": "cylinder",
         "dimensions": {
-            "radius":0.09,
+            "radius":0.5,
             "height":4
         },
         "orbit":{
@@ -675,12 +657,12 @@
     },
     {
         "id": "sl-16_22803" ,
-        "satno":"22803",
+        "satcat_id":22803,
         "type":"target_debris",
         "risk_value":26,
         "count_frag":341,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -693,12 +675,12 @@
     },
     {
         "id": "cz6ar/b_57831" ,
-        "satno":"57831",
+        "satcat_id":57831,
         "type":"target_debris",
         "risk_value":25,
         "count_frag":12,
         "mass": 5800,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.675,
             "height":5.25
@@ -711,12 +693,12 @@
     },
         {
         "id": "cz4cr/b_29014" ,
-        "satno":"39014",
+        "satcat_id":39014,
         "type":"target_debris",
         "risk_value":25,
         "count_frag":71,
         "mass": 2000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
            "radius":1.45,
             "height": 14.8
@@ -729,12 +711,12 @@
     },
     {
         "id": "cz2cr/b_28480" ,
-        "satno":"28480",
+        "satcat_id":28480,
         "type":"target_debris",
         "risk_value":25,
         "count_frag":135,
         "mass": 4000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
            "radius":1.675,
             "height": 8
@@ -747,12 +729,12 @@
     },
     {
         "id": "cz2dr/b_41858" ,
-        "satno":"41858",
+        "satcat_id":41858,
         "type":"target_debris",
         "risk_value":24,
         "count_frag":242,
         "mass": 4000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
            "radius":1.675,
             "height": 10.6
@@ -765,12 +747,12 @@
     },
     {
         "id": "sl-16_17974" ,
-        "satno":"17974",
+        "satcat_id":17974,
         "type":"target_debris",
         "risk_value":22,
         "count_frag":354,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -783,12 +765,12 @@
     },
     {
         "id": "sl-16_26070" ,
-        "satno":"26070",
+        "satcat_id":26070,
         "type":"target_debris",
         "risk_value":22,
         "count_frag":298,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -801,12 +783,12 @@
     },
     {
         "id": "sl-16_22285" ,
-        "satno":"22285",
+        "satcat_id":22285,
         "type":"target_debris",
         "risk_value":22,
         "count_frag":341,
         "mass": 9000,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.9,
             "height":11.5
@@ -819,12 +801,12 @@
     },
         {
         "id": "sl-14_22285" ,
-        "satno":"22285",
+        "satcat_id":22285,
         "type":"target_debris",
         "risk_value":20,
         "count_frag":36,
         "mass": 1407,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.125,
             "height":2.58
@@ -837,7 +819,7 @@
     },
     {
         "id": "COSMOS1249_12319" ,
-        "satno":"12319",
+        "satcat_id":12319,
         "type":"target_debris",
         "risk_value":20,
         "count_frag":27,
@@ -855,12 +837,12 @@
     },
     {
         "id": "sl-8_4589" ,
-        "satno":"4589",
+        "satcat_id":4589,
         "type":"target_debris",
         "risk_value":19,
         "count_frag":95,
         "mass": 1435,
-        "shape": "cylinder",
+        "shape": "hollow_cylinder",
         "dimensions": {
             "radius":1.2,
             "height":6.55
