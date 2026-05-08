@@ -6,6 +6,7 @@ import numpy as np
 #---------------------------DEBRIS DATA FOR SL-16, ENVISAT, AND VESPA--------------------------------------
 debris={
     "SL-16": {  #Zenit-2 SL-16 rocket body
+        "name": "SL-16",
         "mass":9000, #kg
         "shape":"hollow_cylinder", 
         "height": 11.04, #meters
@@ -14,6 +15,7 @@ debris={
 },
      "ENVISAT": {  #ENVISAT satellite
         "mass": 8211, #kg
+        "name": "ENVISAT",
         "solar array":{
             "mass": 900, #kg
             "shape":"box",
@@ -36,6 +38,7 @@ debris={
             "height": 0.20, #meters
         }},
     "VESPA":{
+        "name": "VESPA",
         "mass": 113, #kg
         "shape":"hollow_frustum_cone",
         "diam_small":1.9, #meters
@@ -78,7 +81,7 @@ def inertia_tensor_SL16(debris_, per_cy_mass, x_l, y_l, z_l,x_c,y_c,z_c,t_xc,t_y
     thickness = debris_["SL-16"]["thickness"]
     cy_mass= mass * (per_cy_mass / 100)  # Calculate the mass of the hollow cylinder based on the percentage
     lump_mass = mass - cy_mass  # Calculate the mass of the lumped point mass
-
+    name= debris_["SL-16"]["name"]
     # Calculate the inner and outer radii
     radius_outer = diameter / 2
     radius_inner = radius_outer - thickness
@@ -131,7 +134,7 @@ def inertia_tensor_SL16(debris_, per_cy_mass, x_l, y_l, z_l,x_c,y_c,z_c,t_xc,t_y
         [Iyx, Iyy, Iyz],
         [Izx, Izy, Izz]
     ])
-    return {"tensor": tensor_matrix, "I_xx": Ixx, "I_yy": Iyy, "I_zz": Izz, "I_xy": Ixy, "I_xz": Ixz, "I_yz": Iyz, "I_yx": Iyx, "I_zx": Izx, "I_zy": Izy}
+    return {"tensor": tensor_matrix, "name": name}
 
 #*********************ENVISAT INERTIA TENSOR CALCULATION********************
 def run_envisat_analysis(debris_dict):
@@ -168,6 +171,7 @@ def run_envisat_analysis(debris_dict):
     #______________________________________________________________________________________________
 def inertia_tensor_ENVISAT(debris_, x_s, y_s, z_s, x_a, y_a, z_a,x_b,y_b,z_b, t_xp, t_yp, t_zp, t_xm, t_ym, t_zm, t_xa, t_ya, t_za):
     mass = debris_["ENVISAT"]["mass"]
+    name= debris_["ENVISAT"]["name"]
         #~~~~~~~~~~~~~~Solar Array parameters~~~~~~~~~~~~~~~~~
     sa_mass = debris_["ENVISAT"]["solar array"]["mass"]
     sa_length = debris_["ENVISAT"]["solar array"]["length"]
@@ -266,7 +270,13 @@ def inertia_tensor_ENVISAT(debris_, x_s, y_s, z_s, x_a, y_a, z_a,x_b,y_b,z_b, t_
     Ixz=Izx= I_s_rotated[0,2] + I_a_rotated[0,2] + I_m_rotated[0,2] - (sa_mass*d_s_x*d_s_z + asar_mass*d_a_x*d_a_z + mb_mass*d_m_x*d_m_z)
     Iyz=Izy= I_s_rotated[1,2] + I_a_rotated[1,2] + I_m_rotated[1,2] - (sa_mass*d_s_y*d_s_z + asar_mass*d_a_y*d_a_z + mb_mass*d_m_y*d_m_z)
 
-    return {"I_xx": Ixx, "I_yy": Iyy, "I_zz": Izz, "I_xy": Ixy, "I_xz": Ixz, "I_yz": Iyz, "I_yx": Iyx, "I_zx": Izx, "I_zy": Izy}
+    tensor_matrix = np.array([
+        [Ixx, Ixy, Ixz],
+        [Iyx, Iyy, Iyz],
+        [Izx, Izy, Izz]
+    ])
+
+    return {"tensor": tensor_matrix, "name": name}
 
 #IMPORTANT NOTE: As of now, the code assumes that the solar array follows rigid body dynamics and does not account for the flexibility of the solar array. 
 # This is a simplification and may not be accurate for real-world scenarios. 
@@ -288,6 +298,7 @@ def run_VESPA_analysis(debris_dict):
         print(f"{key}: {value:.4f} kg*m^2")
 
 def inertia_tensor_VESPA(debris_dict,x_v,y_v,z_v,tx_v,ty_v,tz_v):
+    name= debris_dict["VESPA"]["name"]
     mass = debris_dict["VESPA"]["mass"]
     diam_small = debris_dict["VESPA"]["diam_small"]
     diam_large = debris_dict["VESPA"]["diam_large"]
@@ -330,8 +341,65 @@ def inertia_tensor_VESPA(debris_dict,x_v,y_v,z_v,tx_v,ty_v,tz_v):
     Iyy=I_rotated[1,1]+Iyy_of
     Izz=I_rotated[2,2]+Izz_of
 
+    tensor_matrix = np.array([
+        [Ixx, Ixy, Ixz],
+        [Iyx, Iyy, Iyz],
+        [Izx, Izy, Izz]
+    ])
 # Added code for asymmetric mass distribution
 # Offset COM can lead to asymmetric mass distribution which can cause the products of inertia to be non-zero.
 
-    return {"I_xx": Ixx, "I_yy": Iyy, "I_zz": Izz, "I_xy": Ixy, "I_xz": Ixz, "I_yz": Iyz, "I_yx": Iyx, "I_zx": Izx, "I_zy": Izy}
+    return {"tensor": tensor_matrix, "name": name}
+
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Getting input for the initial state of the body (angular velocity and quaternion) for the dynamics simulation
+def omega_quaternion():
+    print("Enter the values of angular velocity in x, y, and z (rad/s) ")
+    omegax = float(input("  omega_x: "))
+    omegay = float(input("  omega_y: "))
+    omegaz = float(input("  omega_z: "))
+    omega=np.array([omegax, omegay, omegaz])
+    print("Enter the values of the quaternion representing the orientation of the body (q0, q1, q2, q3) ")
+    q0 = float(input("  q0: "))
+    q1 = float(input("  q1: "))
+    q2 = float(input("  q2: "))
+    q3 = float(input("  q3: "))
+    quarternion=np.array([q0, q1, q2, q3])
+    if np.linalg.norm(quarternion) == 0:
+       quarternion = np.array([1, 0, 0, 0])
+    state = np.concatenate([omega, quarternion])
+    return state
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Function to calculate the derivatives of the state vector (angular velocity and quaternion) using Euler's equations of motion and the kinematic equation for quaternion derivative.
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def derivatives_calc(state, inertia_tensor, external_torque):
+    # Calculate the time derivative of angular velocity using Euler's equations of motion
+    omega = state[0:3]
+    q = state[3:7]
+    I = inertia_tensor
+    I_inv = np.linalg.inv(I)
+    Iw= I @ omega
+    gyroscopic = np.cross(omega, Iw)
+    omega_dot = I_inv @ (external_torque - gyroscopic)
+    # Calculate the time derivative of the quaternion using the kinematic equation
+    w_matrix = np.array([[0, -omega[0], -omega[1], -omega[2]],
+                         [omega[0], 0, omega[2], -omega[1]],
+                         [omega[1], -omega[2], 0, omega[0]],
+                         [omega[2], omega[1], -omega[0], 0]])
+    q_dot = 0.5 * w_matrix @ q
+    derivatives = np.concatenate([omega_dot, q_dot])
+    return derivatives
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Function to perform numerical integration using the 4th order Runge-Kutta method to update the state vector (angular velocity and quaternion) over a time step dt.
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def Runge_Kutta_4(state, inertia_tensor, external_torque, dt):
+    k1 = derivatives_calc(state, inertia_tensor, external_torque)
+    k2 = derivatives_calc(state + 0.5 * dt * k1, inertia_tensor, external_torque)
+    k3 = derivatives_calc(state + 0.5 * dt * k2, inertia_tensor, external_torque)
+    k4 = derivatives_calc(state + dt * k3, inertia_tensor, external_torque)
+    new_state = state + (dt / 6) * (k1 + 2 * k2 + 2 * k3 + k4)
+    new_state[3:7] = new_state[3:7] / np.linalg.norm(new_state[3:7])  # Normalize the quaternion part of the state vector, this prevents numerical drift in the quaternion magnitude.
+    return new_state
